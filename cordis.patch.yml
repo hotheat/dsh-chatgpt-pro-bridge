@@ -1,0 +1,13 @@
+# ChatGPT Pro bridge: read-only MCP endpoint, OAuth gateway, public tunnel,
+# Host tools, and the management page registered by ./client.
+# Disabling this bundle removes the endpoint, the tools, and the page together.
+# Configure your tunnel domain and optional defaults in your DSH profile patch
+# (~/.dsh/profiles/<profile>/cordis.patch.yml).
+- insert:
+    - id: dsh-chatgpt-pro-bridge
+      name: 'dsh-chatgpt-pro-bridge'
+      config:
+        gateway:
+          port: 7791
+          tunnel:
+            provider: ngrok # Alternative: cloudflare-quick

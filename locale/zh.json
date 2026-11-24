@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "ChatGPT Pro 桥",
+    "description": "让 ChatGPT 网页版通过只读 MCP 读取项目里的多个文件夹，并提供端点与文件夹的管理页。",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "ChatGPT Pro bridge",
+    "description": "Read-only MCP endpoint that lets ChatGPT web read the folders of this project, with a management page for endpoints and folders.",
+    "detail": "docs/DETAIL.md"
+  }
+}

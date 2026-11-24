@@ -1,0 +1,75 @@
+{
+  "name": "dsh-chatgpt-pro-bridge",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Read-only MCP bridge and delegation driver that put ChatGPT web behind a DSH session.",
+  "author": "hotheat",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotheat/dsh-chatgpt-pro-bridge.git"
+  },
+  "homepage": "https://github.com/hotheat/dsh-chatgpt-pro-bridge",
+  "bugs": {
+    "url": "https://github.com/hotheat/dsh-chatgpt-pro-bridge/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "chatgpt",
+    "mcp",
+    "bridge"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "files.js",
+    "projects.js",
+    "delegation.js",
+    "client.js",
+    "gateway.js",
+    "tunnel.js",
+    "driver.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "page",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-plugin-manager",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "dependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}
